@@ -110,7 +110,7 @@ building_surface = pygame.image.load(r'C:\python game\game1\assets\4.png')
 building_surface = pygame.transform.scale2x(building_surface)
 #tạo timer 
 spawnbuilding = pygame.USEREVENT 
-pygame.time.set_timer(spawnbuilding, 1200) # sau 1.2 s sẽ xuất hiện tòa nhà
+pygame.time.set_timer(spawnbuilding, 2500) # sau 2.5 s sẽ xuất hiện tòa nhà
 screen = pygame.display.set_mode((432, 768))
 #tạo hình đồng xu
 coin_surface = pygame.image.load(r'C:\python game\game1\coin.png')
@@ -145,7 +145,7 @@ while running:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and game_active:
-                drone_y -= 5
+                drone_y -= 3.5
                 flap_sound.play()
 
             if event.key == pygame.K_SPACE and not game_active:
@@ -194,6 +194,6 @@ while running:
     drone_hcn.centery += drone_y
 
     pygame.display.update()
-    clock.tick(100)
+    clock.tick(0)
 
 
